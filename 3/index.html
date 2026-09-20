@@ -1,0 +1,125 @@
+<!--  . . . . . . . . . . . . . .Selectors masterclass . .. . . . . . . . . . .  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SELECTORS Masterclass</title>
+
+    <style>
+
+       /* div is an Element Selector */
+       /* What it does: Selects HTML elements based on their tag name. Element selector = HTML tag name */
+       div{
+            /* background-color:red ; */
+        }
+
+        /* CLASS SELECTOR. */
+        /* Selects elements having a particular class. Remember: . = class */
+        /* .red means class is red. */
+        .red{
+            background-color:red ;
+        }
+        
+       
+
+        /* ID SELECTOR */
+        /* Selects an element having a particular id.Usually, an ID should be unique on a page.*/
+        /*    #green means the id is green. */
+        #green{
+            background-color:green ;
+        }
+
+
+        /* CHILD SELECTOR */
+        /* Selects only the direct children of an element.The first <p> is a direct child of <div>, so it gets selected. Remember: > = direct child only */
+        div > p{
+            color: blue;
+            background-color:brown ;
+        }
+
+        /* DECENDENT SELECTOR */
+        /* Descendant Selector : Selects all elements inside another element, even if they are nested several levels deep. Space = anywhere inside, > = directly inside*/
+
+        div p {
+        color: blue;
+        background-color: brown;
+        } 
+        /* UNIVERSAL SELECTOR */
+        /* Selects every HTML element on the page. This applies to all elements.Remember: * = everything */
+        
+        /* PSEUDO SELECTOR */ 
+        a:visited{
+            color:pink ;      
+        }
+        /* if the link is visited once the color will change. */
+
+        a:link{
+            color:green ;
+        }
+        /* unopened links are visible as green in colour  */
+        
+        a:active{
+           background-color: red;
+        }
+        /* if a link is  */
+
+        a:hover{
+            background-color:yellow ;
+        }
+        /* hovering cursor over the link changes the colour */
+        
+        p:first-child{
+            background-color: aqua;
+        }
+
+
+    </style>
+
+</head>
+<body>
+     
+
+    <!-- IF we use only div as a elemet slector its gonna apply changes to all the divs,
+         thats why classes are used to seperately target the specific elements for changes. -->
+    
+     <div class="red">
+     this is the data inside element selector.
+    </div>
+
+    <!-- we can also use ID selector as it only chages the style of the element with the specific id.
+     here id is green on second <div> element. -->
+    
+    <div id="green">
+      this is the data inside ID selector.  
+    </div>
+
+    <!-- Child selector  -->
+    <div>
+        <p>
+            this is the data inside chil selector.
+        </p>
+    </div>
+    
+    <!-- DECEDENT selector -->
+     <div>
+        <p>
+            this is the data inside decendent selector.
+        </p>
+     </div>
+
+     <!-- UNIVERSAL SELECTOR -->
+
+     <!-- PSEUDO SElector -->
+      <div>
+          <a href="https://www.google.com">Go to google</a>
+          <a href="https://www.youtube.com">Go to youtube</a>
+      </div>
+
+      <main class="one"> 
+        <p> I am first </p>
+        <p> I am second</p>
+        <!-- wherever p is the first child of its parent, apply these properties -->
+      </main>
+</body>
+</html>
