@@ -1,0 +1,62 @@
+<!-- . . . . . . . .  BOX MODEL- Margine , Pading , Borders. . . . . . .   -->
+<!-- css have every thing as a box.every container has a box design ex div,span etc. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS BOX MODEL</title>
+    <style>
+        *{
+            margin: 0; 
+            padding: 0;
+            /* m:0= shortcut for setting margine,
+               p:0= shortcut for setting padding.
+               these are known as ammit shortcuts. */
+        }
+        /* if i wanna give all the boxes(class) same properties then the .box is used. */
+        /* If i wanna give a specific box(class) a specific properties then we have to use box-1, box-2. */
+        
+        
+        .box{
+            background-color: aqua;
+        }
+
+
+        .box1{
+            color: yellow;
+            padding:10px  ;
+            margin: 25px;
+            border: 2px solid blue ;
+            height: 200px;
+            box-sizing: border-box;
+            /* box-sizing: border-box means that the height mentioned in the properties is the height including border and padding. */
+       }
+       /* padding gets the background coloue too as its get applie inside the content. */
+       /* Total width- Width + left padding + Right padding + Left border + Left margine + Right margine */
+       /* Total Height- HEight + Top Padding + Bottom Padding + Top Border + Bottom Border + Top Margine + Bottom Margin */
+
+        .box2{
+            color: red;
+            padding:10px  ;
+            margin: 45px;
+            border: 2px solid black ;
+            height: 200px;
+            box-sizing: border-box;
+
+        }
+/* MARGINE COLLAPSE- It means when there is margine between two consecutive boxes,
+                     there would not be individual margines of both the boxes the 
+                     margine between themwould be the heighest value between both the margines
+                     as we can see above box1 m= 25px, box2 m= 45px there would be margine of
+                     45 + 25 px ,the margine would be greatest between them i.e= 45px.  */
+
+    </style>
+</head>
+<body>
+    <div class="box box1">I am a box</div>
+    <div class="box box2">I am the second box</div>
+    <!-- we can give a single element multiple class. These multiple classes are given by adding space in between classes.  -->
+</body>
+</html>
+ 
